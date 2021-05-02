@@ -1,3 +1,4 @@
+var ngrok = require('ngrok');
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';
 // Listen on a specific port via the PORT environment variable
@@ -47,3 +48,22 @@ cors_proxy.createServer({
 }).listen(port, host, function() {
   console.log('Running CORS Anywhere on ' + host + ':' + port);
 });
+
+/*
+ngrokopts={
+  proto: 'http',
+  authtoken:'1rzIKhrqurrKdjOy5XAEAzgmk82_4oiPcJhnD3giPLzc5aG68',
+  auth:'berkay:pass',
+  addr:'8080',
+  region: 'eu'
+};
+*/
+
+ /*function run(){
+  setTimeout(async function(){
+    var url = await ngrok.connect(ngrokopts);
+    console.log({url});
+  },2000);
+  
+}
+run();*/
