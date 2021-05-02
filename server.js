@@ -40,7 +40,7 @@ cors_proxy.createServer({
     // 'x-forwarded-proto',
     // 'x-forwarded-port',
   ],
-  redirectSameOrigin: true,
+  redirectSameOrigin: false,
   httpProxyOptions: {
     // Do not add X-Forwarded-For, etc. headers, because Heroku already adds it.
     xfwd: false,
@@ -53,17 +53,17 @@ cors_proxy.createServer({
 ngrokopts={
   proto: 'http',
   authtoken:'1rzIKhrqurrKdjOy5XAEAzgmk82_4oiPcJhnD3giPLzc5aG68',
-  auth:'berkay:pass',
+  //auth:'berkay:pass',
   addr:'8080',
   region: 'eu'
 };
-*/
 
- /*function run(){
+ function run(){
   setTimeout(async function(){
     var url = await ngrok.connect(ngrokopts);
     console.log({url});
   },2000);
   
 }
-run();*/
+run();
+*/
